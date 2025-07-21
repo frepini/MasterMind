@@ -25,10 +25,10 @@
             <Font name="System Bold" size="20.0" />
          </font>
          <VBox.margin>
-            <Insets bottom="-10.0" />
+            <Insets bottom="-20.0" />
          </VBox.margin>
       </Label>
-      <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="500.0" maxWidth="750.0" minHeight="-Infinity" minWidth="750.0" prefHeight="100.0" prefWidth="750.0" text="MasterMind è un gioco di società dove lo scopo è indovinare una sequenza segreta di 4 colori. Ad ogni turno il giocatore può provare ad indovinare la sequenza: se non la indovina, gli viene fornito il numero di colori giusti che sono anche nella posizione giusta (senza dire quali sono) e il numero di colori giusti ma nella posizione sbagliata (anche qua senza dire quali sono). Il gioco continua fino a quando il giocatore non indovina la sequenza segreta. BUONA FORTUNA!" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS">
+      <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="500.0" maxWidth="750.0" minHeight="100.0" minWidth="750.0" prefHeight="100.0" prefWidth="750.0" text="MasterMind è un gioco di società dove lo scopo è indovinare una sequenza segreta di 4 colori. Ad ogni turno il giocatore può provare ad indovinare la sequenza: se non la indovina, gli viene fornito il numero di colori giusti che sono anche nella posizione giusta (senza dire quali sono) e il numero di colori giusti ma nella posizione sbagliata (anche qua senza dire quali sono). Il gioco continua fino a quando il giocatore non indovina la sequenza segreta. BUONA FORTUNA!" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS">
          <font>
             <Font size="15.0" />
          </font>
