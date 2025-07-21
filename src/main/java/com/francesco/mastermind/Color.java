@@ -1,7 +1,7 @@
 package com.francesco.mastermind;
 
 /**
- * enum Color that lists the possible color of each element of a sequence.
+ * Enum 'Color' that lists the possible color of each element of a sequence.
  * Every Color has:
  * - name
  * - hex

@@ -54,7 +54,7 @@ public class ColorSequence extends Sequence {
      * Returns the color that is in the <code>index</code> position in the sequence.
      * If <code>index</code> is not valid, it returns null.
      * @param index index of the color
-     * @return the color in the `index` position in the sequence
+     * @return the color in the <code>index</code> position in the sequence
      */
     public Color getColor(int index) {
         try {
