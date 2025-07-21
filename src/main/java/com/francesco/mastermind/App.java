@@ -12,7 +12,6 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("mastermind-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        scene.getStylesheets().add(App.class.getResource("style.css").toExternalForm());
         stage.setTitle("Mastermind");
         stage.setScene(scene);
         stage.show();

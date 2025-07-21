@@ -6,18 +6,33 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.random.RandomGenerator;
 
+/**
+ * Class 'ColorSequence' that represents a sequence of colors (from the enum Color).
+ */
 public class ColorSequence extends Sequence {
     public static final int SEQUENCE_LENGTH = 4;
     final private Color[] sequence;
 
+    /**
+     * Constructor with no parameters that sets the sequence length
+     */
     public ColorSequence() {
         this.sequence = new Color[SEQUENCE_LENGTH];
     }
 
+    /**
+     * Constructor that initialize the sequence of the object to the one that it is passed
+     * @param sequence the sequence to be assigned
+     */
     public ColorSequence(Color[] sequence) {
         this.sequence = sequence;
     }
 
+    /**
+     * Sets the color c at the index position in the sequence
+     * @param c color to be set
+     * @param index index where the color needs to be put
+     */
     public void setColor(Color c, int index) {
         try {
             checkIndex(sequence.length, index);
@@ -27,10 +42,20 @@ public class ColorSequence extends Sequence {
         }
     }
 
+    /**
+     * Returns the sequence
+     * @return the sequence
+     */
     public Color[] getSequence() {
         return sequence;
     }
 
+    /**
+     * Returns the color that is in the <code>index</code> position in the sequence.
+     * If <code>index</code> is not valid, it returns null.
+     * @param index index of the color
+     * @return the color in the `index` position in the sequence
+     */
     public Color getColor(int index) {
         try {
             checkIndex(sequence.length, index);
@@ -41,6 +66,11 @@ public class ColorSequence extends Sequence {
         }
     }
 
+    /**
+     * Returns the number of color of the <code>guess</code> sequence that are present in the same position of this sequence
+     * @param guess the sequence to confront
+     * @return the number of color of the <code>guess</code> sequence that are present in the same position of this sequence
+     */
     public int countRightColorRightPosition(ColorSequence guess) {
         int count = 0;
         for (int i = 0; i < SEQUENCE_LENGTH; i++) {
@@ -51,6 +81,11 @@ public class ColorSequence extends Sequence {
         return count;
     }
 
+    /**
+     * Returns the number of color of the <code>guess</code> sequence that are present but in a different position of this sequence
+     * @param guess the sequence to confront
+     * @return the number of color of the <code>guess</code> sequence that are present but in a different position of this sequence
+     */
     public int countRightColorWrongPosition(ColorSequence guess) {
         Map<Color, Integer> secretColorCounts = new HashMap<>();
         Map<Color, Integer> guessColorCounts = new HashMap<>();
@@ -81,6 +116,10 @@ public class ColorSequence extends Sequence {
         return count;
     }
 
+    /**
+     * Returns a color sequence composed by random colors
+     * @return a color sequence composed by random colors
+     */
     public static ColorSequence getRandomColorSequence() {
         RandomGenerator rnd = RandomGenerator.getDefault();
         Color[] allColors = Color.values();
