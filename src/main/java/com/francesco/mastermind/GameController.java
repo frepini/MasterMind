@@ -14,6 +14,9 @@ import javafx.scene.text.FontWeight;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class 'GameController' that contains all the methods to keep the game running.
+ */
 public class GameController {
     @FXML
     private Label mastermindLabel;
@@ -26,11 +29,11 @@ public class GameController {
     @FXML
     private ComboBox<Color> colorBox3;
     @FXML
+    private HBox resultBox;
+    @FXML
     private Button guessButton;
     @FXML
     private Button newOrEndGameButton;
-    @FXML
-    private HBox resultBox;
     @FXML
     private Label resultText;
     @FXML
@@ -38,6 +41,12 @@ public class GameController {
 
     private Game game;
 
+    /**
+     * Method that initialize the game:
+     * - create a new Game object
+     * - sets the default setting for all the components
+     * - makes the comboBox have the right background-color for each color
+     */
     @FXML
     public void initialize() {
         game = new Game();
@@ -90,6 +99,13 @@ public class GameController {
         }
     }
 
+    /**
+     * Method that handles the sending of a color sequence guess by the user.
+     * It retrieves the color sequence by the comboBox, creates the ColorSequence object with the selected colors,
+     * then it creates an attempt with that. Successively, it creates a row which contains the current attempt (using the
+     * <code>createAttemptRot()</code> method) and adds it to che container of the attempts.
+     * In the end, it checks if the sequence is correct (using the <code>isCorrect()</code> method).
+     */
     @FXML
     protected void onTryButtonClick() {
         List<Color> sequence = new ArrayList<>(List.of(
@@ -118,6 +134,14 @@ public class GameController {
         }
     }
 
+    /**
+     * Given an attempt, it creates a row with:
+     * - circles that represent the sequence guess of the attempt
+     * - the number of right colors in right position and the number of right colors in wrong position
+     * The row is an HBox, and it is what this method returns
+     * @param attempt the attempt to create the row
+     * @return the HBox containing the graphical representation of the attempt
+     */
     private HBox createAttemptRow(Attempt attempt) {
         HBox row = new HBox(10);
         row.setAlignment(Pos.CENTER);
@@ -139,6 +163,14 @@ public class GameController {
         return row;
     }
 
+    /**
+     * This method handles the clicking of the button to start a new game (when the current game has ended) or to
+     * end the game (when the current game hasn't ended yet but the player gives up).
+     * We use the same button to handle both the forced end of the game and the starting of a new game.
+     * The clicking of the button with the text "Nuova partita!" calls the <code>initialize</code> method that starts a new game.
+     * The clicking of the button with the text "Termina partita!" shows the correct sequence and change the text of the
+     * button itself to "Nuova partita!".
+     */
     public void onNewOrEndGameButtonClick() {
         if (newOrEndGameButton.getText().equals("Termina partita!")) {
             guessButton.setVisible(false);
