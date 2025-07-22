@@ -43,9 +43,12 @@ public class GameController {
 
     /**
      * Method that initialize the game:
+     * <p>
      * - create a new Game object
+     * <p>
      * - sets the default setting for all the components
-     * - makes the comboBox have the right background-color for each color
+     * <p>
+     * - makes every comboBox have the right background-color for each color
      */
     @FXML
     public void initialize() {
@@ -101,9 +104,11 @@ public class GameController {
 
     /**
      * Method that handles the sending of a color sequence guess by the user.
+     * <p>
      * It retrieves the color sequence by the comboBox, creates the ColorSequence object with the selected colors,
      * then it creates an attempt with that. Successively, it creates a row which contains the current attempt (using the
      * <code>createAttemptRot()</code> method) and adds it to che container of the attempts.
+     * <p>
      * In the end, it checks if the sequence is correct (using the <code>isCorrect()</code> method).
      */
     @FXML
@@ -136,8 +141,11 @@ public class GameController {
 
     /**
      * Given an attempt, it creates a row with:
+     * <p>
      * - circles that represent the sequence guess of the attempt
+     * <p>
      * - the number of right colors in right position and the number of right colors in wrong position
+     * <p>
      * The row is an HBox, and it is what this method returns
      * @param attempt the attempt to create the row
      * @return the HBox containing the graphical representation of the attempt
@@ -166,8 +174,11 @@ public class GameController {
     /**
      * This method handles the clicking of the button to start a new game (when the current game has ended) or to
      * end the game (when the current game hasn't ended yet but the player gives up).
+     * <p>
      * We use the same button to handle both the forced end of the game and the starting of a new game.
+     * <p>
      * The clicking of the button with the text "Nuova partita!" calls the <code>initialize</code> method that starts a new game.
+     * <p>
      * The clicking of the button with the text "Termina partita!" shows the correct sequence and change the text of the
      * button itself to "Nuova partita!".
      */

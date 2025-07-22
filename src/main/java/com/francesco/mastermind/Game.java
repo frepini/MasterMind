@@ -5,8 +5,11 @@ import java.util.*;
 /**
  * Class 'Game' that represents a game of mastermind.
  * Since every object of the 'Game' class is a game it has 3 fields:
+ * <p>
  * - the color sequence to guess (<code>correct</code>)
+ * <p>
  * - the list of attempts that have been submitted (<code>attempts</code>)
+ * <p>
  * - the count of attempts that have been submitted (<code>attemptsCount</code>)
  */
 public class Game {
@@ -16,8 +19,11 @@ public class Game {
 
     /**
      * Constructor with no parameters that initializes the 3 fields:
+     * <p>
      * - the sequence to guess is obtained randomly
+     * <p>
      * - the attempts list is initialized
+     * <p>
      * - the attempts count is set to 0
      */
     public Game() {
@@ -28,6 +34,7 @@ public class Game {
 
     /**
      * Returns the correct sequence of the game.
+     * <p>
      * This method is fundamental because when the player wants to end the game, we need the correct sequence
      * to be displayed. With this method we obtain that sequence in order to show it on screen.
      * @return the correct sequence of the game
@@ -71,8 +78,10 @@ public class Game {
 
     /**
      * Checks if the color sequence passed (<code>guess</code>) is correct or not.
-     * To check if it's correct there 2 possible ways:
+     * To check if it's correct there are 2 possible ways:
+     * <p>
      * 1. using the equals method (as below)
+     * <p>
      * 2. checking that the number of right colors in right position is equal to the length of the color sequence
      * @param guess the guess the player is making, which is a color sequence
      * @return true if the color sequence passed (<code>guess</code>) is correct, false otherwise

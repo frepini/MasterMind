@@ -2,7 +2,7 @@ package com.francesco.mastermind;
 
 /**
  * Abstract class 'Sequence' that represents a generic sequence of elements.
- * It has only one method with implementation, and that is checkIndex()
+ * It has only one method with implementation, and that is checkIndex().
  */
 public abstract class Sequence {
     /**

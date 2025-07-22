@@ -2,9 +2,12 @@ package com.francesco.mastermind;
 
 /**
  * Class 'Attempt' that represents an attempt to guess the sequence.
- * Since it's a guess it has 3 attributes:
+ * Since it's an attempt it has 3 fields:
+ * <p>
  * - the sequence
+ * <p>
  * - the number of right colors in right position
+ * <p>
  * - the number of right colors in wrong position
  */
 public class Attempt {
@@ -13,7 +16,7 @@ public class Attempt {
     final private int countRightColorWrongPosition;
 
     /**
-     * Constructor that initialize all the attributes of the attempt
+     * Constructor that initialize all the fields of the attempt
      * @param sequence the sequence of the attempt
      * @param countRightColorRightPosition the number of right colors in right position
      * @param countRightColorWrongPosition the number of right colors in wrong position
