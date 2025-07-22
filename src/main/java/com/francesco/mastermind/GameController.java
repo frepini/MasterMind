@@ -31,11 +31,11 @@ public class GameController {
     @FXML
     private HBox resultBox;
     @FXML
+    private Label resultText;
+    @FXML
     private Button guessButton;
     @FXML
     private Button newOrEndGameButton;
-    @FXML
-    private Label resultText;
     @FXML
     private VBox attemptsBox;
 
@@ -107,7 +107,7 @@ public class GameController {
      * <p>
      * It retrieves the color sequence by the comboBox, creates the ColorSequence object with the selected colors,
      * then it creates an attempt with that. Successively, it creates a row which contains the current attempt (using the
-     * <code>createAttemptRot()</code> method) and adds it to che container of the attempts.
+     * <code>createAttemptRow()</code> method) and adds it to che container of the attempts.
      * <p>
      * In the end, it checks if the sequence is correct (using the <code>isCorrect()</code> method).
      */

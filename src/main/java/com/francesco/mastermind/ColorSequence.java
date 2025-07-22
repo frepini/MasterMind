@@ -29,6 +29,14 @@ public class ColorSequence extends Sequence {
     }
 
     /**
+     * Returns the sequence
+     * @return the sequence
+     */
+    public Color[] getSequence() {
+        return sequence;
+    }
+
+    /**
      * Sets the color c at the index position in the sequence
      * @param c color to be set
      * @param index index where the color needs to be put
@@ -40,14 +48,6 @@ public class ColorSequence extends Sequence {
         } catch (IndexOutOfBoundsException e) {
             System.out.println("Errore: l'indice inserito non è valido");
         }
-    }
-
-    /**
-     * Returns the sequence
-     * @return the sequence
-     */
-    public Color[] getSequence() {
-        return sequence;
     }
 
     /**

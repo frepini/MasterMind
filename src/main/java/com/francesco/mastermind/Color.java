@@ -2,8 +2,11 @@ package com.francesco.mastermind;
 
 /**
  * Enum 'Color' that lists the possible color of each element of a sequence.
+ * <p>
  * Every Color has:
+ * <p>
  * - name
+ * <p>
  * - hex
  */
 public enum Color {
